@@ -3,5 +3,10 @@ project(ArduinoLib)
 
 set(CMAKE_CXX_STANDARD 17)
 
-include_directories(cores/arduino)
-include_directories(variants/${PINOUT}/pins_arduino.h)
+set(ARDUINO_INCLUDE_DIRECTORIES
+        ${CMAKE_CURRENT_SOURCE_DIR}/cores/arduino
+        ${CMAKE_CURRENT_SOURCE_DIR}/variants/${PINOUT})
+
+include_directories(${ARDUINO_INCLUDE_DIRECTORIES})
+
+set(ARDUINO_INCLUDE_DIRECTORIES ${ARDUINO_INCLUDE_DIRECTORIES} PARENT_SCOPE)
