@@ -1,3 +1,3 @@
 # ArduinoCore-avr
 
-Forked ArduinoCore-avr to be used as an standalone library for AVR development
+Forked ArduinoCore-avr to be used as an stand-alone library for AVR development
